@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="14" viewBox="0 0 1200 14">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#2874f0" stop-opacity="0"/>
+      <stop offset=".3" stop-color="#2874f0"/>
+      <stop offset=".5" stop-color="#ffe500"/>
+      <stop offset=".7" stop-color="#2874f0"/>
+      <stop offset="1" stop-color="#2874f0" stop-opacity="0"/>
+    </linearGradient>
+    <style>.d{animation:m 3s linear infinite}@keyframes m{from{transform:translateX(-120px)}to{transform:translateX(1320px)}}</style>
+  </defs>
+  <rect y="6" width="1200" height="2" rx="1" fill="url(#g)"/>
+  <circle class="d" cx="0" cy="7" r="5" fill="#ffe500"/>
+</svg>

@@ -1,0 +1,49 @@
+# Developed by Syed Muhammad Tayyab
+name: build
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  compile-and-package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Fetch compile-time APIs
+        run: |
+          mkdir -p .ci-lib
+          curl -sSfL -o .ci-lib/jakarta.servlet-api.jar \
+            https://repo1.maven.org/maven2/jakarta/servlet/jakarta.servlet-api/6.0.0/jakarta.servlet-api-6.0.0.jar
+
+      - name: Compile Java sources
+        run: |
+          mkdir -p build/classes
+          javac --release 17 -encoding UTF-8 -d build/classes \
+            -cp ".ci-lib/*:src/main/webapp/WEB-INF/lib/*" \
+            $(find src/main/java -name '*.java')
+
+      - name: Package WAR
+        run: |
+          mkdir -p dist/eazydeals
+          cp -r src/main/webapp/. dist/eazydeals/
+          mkdir -p dist/eazydeals/WEB-INF/classes
+          cp -r build/classes/. dist/eazydeals/WEB-INF/classes/
+          (cd dist/eazydeals && jar -cf ../eazydeals.war .)
+          ls -lh dist/eazydeals.war
+
+      - name: Upload WAR artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: eazydeals-war
+          path: dist/eazydeals.war

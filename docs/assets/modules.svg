@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-label="EazyDeals module map">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1a3a"/><stop offset="1" stop-color="#123a8a"/></linearGradient>
+    <style>
+      .t{font-family:'Segoe UI',Poppins,Arial,sans-serif}
+      .card{animation:up .9s ease-out both}
+      .c2{animation-delay:.2s}.c3{animation-delay:.4s}.c4{animation-delay:.6s}
+      .flow{stroke-dasharray:8 8;animation:dash 1.2s linear infinite}
+      @keyframes up{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+      @keyframes dash{to{stroke-dashoffset:-32}}
+    </style>
+  </defs>
+  <rect width="1200" height="420" rx="22" fill="url(#bg)"/>
+  <text class="t" x="600" y="48" font-size="24" font-weight="800" fill="#ffffff" text-anchor="middle">EazyDeals — Module Map</text>
+  <text class="t" x="600" y="74" font-size="14" fill="#9fbaf0" text-anchor="middle">Developed by Syed Muhammad Tayyab</text>
+
+  <g class="card t">
+    <rect x="40" y="110" width="260" height="270" rx="16" fill="#ffffff" fill-opacity=".07" stroke="#2874f0" stroke-width="2"/>
+    <text x="170" y="146" font-size="19" font-weight="800" fill="#ffe500" text-anchor="middle">🛍️ Storefront</text>
+    <g font-size="14" fill="#dbe7ff"><text x="64" y="184">• Home &amp; category filter</text><text x="64" y="212">• Product search</text><text x="64" y="240">• Product details page</text><text x="64" y="268">• Wishlist (♥ toggle)</text><text x="64" y="296">• Cart + quantity control</text><text x="64" y="324">• Buy now / Checkout</text><text x="64" y="352">• Demo payment page</text></g>
+  </g>
+  <g class="card c2 t">
+    <rect x="330" y="110" width="260" height="270" rx="16" fill="#ffffff" fill-opacity=".07" stroke="#38bdf8" stroke-width="2"/>
+    <text x="460" y="146" font-size="19" font-weight="800" fill="#ffe500" text-anchor="middle">👤 Account</text>
+    <g font-size="14" fill="#dbe7ff"><text x="354" y="184">• Register / Login</text><text x="354" y="212">• Profile &amp; personal info</text><text x="354" y="240">• Delivery address</text><text x="354" y="268">• Order history + status</text><text x="354" y="296">• Forgot password (OTP)</text><text x="354" y="324">• Change password</text><text x="354" y="352">• Logout</text></g>
+  </g>
+  <g class="card c3 t">
+    <rect x="620" y="110" width="260" height="270" rx="16" fill="#ffffff" fill-opacity=".07" stroke="#22c55e" stroke-width="2"/>
+    <text x="750" y="146" font-size="19" font-weight="800" fill="#ffe500" text-anchor="middle">🛠️ Admin Panel</text>
+    <g font-size="14" fill="#dbe7ff"><text x="644" y="184">• Add / update / delete</text><text x="644" y="206">   categories</text><text x="644" y="236">• Add / update / delete</text><text x="644" y="258">   products (image upload)</text><text x="644" y="288">• View orders, set status</text><text x="644" y="318">• View &amp; remove users</text><text x="644" y="348">• Add / remove admins</text></g>
+  </g>
+  <g class="card c4 t">
+    <rect x="910" y="110" width="250" height="270" rx="16" fill="#ffffff" fill-opacity=".07" stroke="#ffe500" stroke-width="2"/>
+    <text x="1035" y="146" font-size="19" font-weight="800" fill="#ffe500" text-anchor="middle">✉️ Mailing</text>
+    <g font-size="14" fill="#dbe7ff"><text x="932" y="184">• Welcome on register</text><text x="932" y="212">• Order confirmation</text><text x="932" y="240">• Order shipped notice</text><text x="932" y="268">• Password-reset OTP</text><text x="932" y="306" fill="#9fbaf0">Jakarta Mail over</text><text x="932" y="328" fill="#9fbaf0">Gmail SMTP (TLS 587)</text></g>
+  </g>
+  <path class="flow" d="M300 245 H330 M590 245 H620 M880 245 H910" stroke="#ffe500" stroke-width="3"/>
+</svg>

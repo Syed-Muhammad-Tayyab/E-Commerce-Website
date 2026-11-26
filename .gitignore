@@ -1,0 +1,33 @@
+# Developed by Syed Muhammad Tayyab
+
+# Build output
+build/
+bin/
+dist/
+target/
+out/
+*.class
+*.war
+.ci-lib/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.metadata/
+.recommenders/
+
+# Logs & OS
+*.log
+logs/
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env
+*.env
+context.local.xml
+
+# Uploaded product images (keep the folder)
+src/main/webapp/Product_imgs/*
+!src/main/webapp/Product_imgs/.gitkeep
